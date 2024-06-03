@@ -1,0 +1,33 @@
+@import '../../styles.scss';
+
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.navbar a{
+    position: relative;
+}
+.active{
+    color:$bgColor !important; 
+}
+
+.navbar a.active::after{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top:65px;
+    height: 3px;
+    background-color: $bgColor;
+}
+ul .nav-link{
+    color:#121212 ;
+}
+
+@media (max-width: 768px) {
+    .navbar a.active::after {
+        display: none;
+    }
+}

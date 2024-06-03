@@ -1,0 +1,55 @@
+<app-header></app-header>
+<div class="program-section my-5 py-5 px-3 bg-light">
+    <div class="container">
+        <div class="row g-4 mb-5">
+            <div *ngFor="let program of programsList" class="col-lg-4 col-md-4 ">
+                <div class="card p-3 border-0 shadow rounded-3">
+                   <div class="cover-logo-imgs position-relative bg-white pb-3">
+                    <img [src]="program.coverpic" alt="cover-pic" class="w-100 rounded-3">
+                    <img [src]="program.logopic" alt="logo-pic" class="logo-width border-purple position-absolute bottom-0 start-0 bg-white border-1 rounded-3 p-2 mx-3 mt-5">
+                   </div>
+                  <div class="d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="category-bg rounded-4 px-2 py-1 category">{{program.category}}</p>
+                        <p class="fee-bg px-2 py-1 rounded-4 fee">€{{program.fee}}</p>
+                       </div>
+                       <h2 class="progName">{{program.progName}}</h2>
+                       <p class="schoolName">{{program.schoolName}}</p>
+                       <div class="d-flex justify-content-between">
+                        <div class="card-footer-data">
+                           <div class="d-flex">
+                            <img src="../../assets/images/fi-rr-calendar.svg" width="16" height="16"  alt="calender">
+                            <span class="ps-1">{{program.start_date}}</span>
+                           </div>
+                           <div class="d-flex">
+                              <img src="../../assets/images/fi-rr-globe.svg" width="16" height="16"  alt="globe">                           
+                              <span class="ps-1">{{program.lang}}</span>
+                           </div>
+                        </div>
+                        <div class="card-footer-data">
+                            <div class="d-flex">
+                                <img src="../../assets/images/fi-rr-time-oclock.svg" width="16" height="16" alt="oclock">
+                                <span class="ps-1">{{program.lenght}} Years</span>
+                               </div>
+                               <div class="d-flex">
+                                <img src="../../assets/images/fi-rr-marker.svg" width="16" height="16" alt="calender">
+                                <span class="ps-1">{{program.city}}</span>
+                               </div>
+                        </div>
+                       </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <a href="#" class="bg-purple border-0">&laquo;</a>
+            <a href="#" class="clicked">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#" class="bg-purple border-0">&raquo;</a>
+          </div>
+    </div>
+</div>

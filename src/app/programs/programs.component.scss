@@ -1,0 +1,83 @@
+@import '../../styles.scss';
+
+.border-purple{
+    border: 1px solid #D6D8F9;
+}
+.logo-width{
+    width:40%
+}
+.bg-purple{
+    color: $bgColor !important;
+}
+.card{
+    // box-sizing: border-box;
+    min-height:380px;
+    
+    
+    
+}
+.category{
+    
+    font-size: 11px !important;
+    font-weight: 400;
+}
+.fee{
+    font-size: 14px;
+    font-weight: 400;
+
+}
+.category-bg{
+    background-color:$lightBgColor;
+}
+
+.fee-bg{
+    background-color: $lightPinkbg;
+}
+.progName{
+    font-size: 14px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    
+    
+}
+.schoolName{
+    font-size: 14px;
+    font-weight: 700;
+}
+.card-footer-data{
+    color:$lightGreyColor;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.text-purple{
+    color: $bgColor;
+}
+
+
+.pagination {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+.pagination a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #D6D8F9;
+    border-radius:100% ;
+    margin-left: 5px;
+    padding-top: 8px;
+    width: 40px;
+    height: 40px;    
+
+  }
+
+.clicked{
+    background-color: $bgColor;
+    color: white !important;
+    
+}

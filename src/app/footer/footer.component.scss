@@ -1,0 +1,72 @@
+
+@import '../../styles';
+
+.footer-section{
+    background-color: $bgColor ;
+    color: white;
+}
+.footer-logo{
+    width: 25%;
+}
+.social-icons{
+    display: flex;
+   
+}
+.social-icons i{
+    padding-left:15px;
+    padding-top: 15px;
+    border-radius:100% ;
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    // border-radius: 100%;
+}
+.bg-purple{
+    background-color: #F6F0F6;
+}
+.subscribe{
+    position: absolute;
+    top: -80px;
+}
+.subscribe button{
+    background-color: $bgColor;
+    color: white;
+    top:10%;
+    right:2% ;
+}
+.subscribe-input ,.subscribe-caption{
+    width:40% ;
+}
+
+@media screen and (max-width:550px) {
+    .footer-logo{
+        width:75%;
+    }
+    h3{
+        font-size: 20px;
+    }
+    p{
+        font-size: 16px;
+    }
+    .subscribe{
+        flex-direction: column;
+        top:-100px;
+    }
+    
+    .subscribe button{
+      top:17%;
+    }
+    .subscribe h5 , button{
+        font-size:small ;
+    }
+    .subscribe p{
+        font-size:smaller ;
+    }
+    input::placeholder{
+        font-size: 12px;
+    }
+    .subscribe-input ,.subscribe-caption{
+        width:100% ;
+    }
+    
+}

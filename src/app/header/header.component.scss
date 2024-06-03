@@ -1,0 +1,58 @@
+@import '../../styles.scss';
+ 
+
+.SearchInput button{
+    background-color:$bgColor;
+}
+
+input{
+    box-sizing: border-box;
+}
+.form-control:focus{
+  outline: 0 !important;
+  box-shadow: none;
+}
+.bg-header .row h1{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.4;
+    color:  #121212;
+}
+
+.dropdown-bg{
+   background-color: #F6F0F6;
+}
+
+.dropdown{
+    border: 1px solid $lightBgColor;
+    background-color: white;
+    
+}
+
+.dropdown span{
+    text-overflow: ellipsis;
+
+}
+
+.text-overflow{
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width:550px) {
+   h1{
+    font-size: 24px;
+    font-weight: 500;
+   }
+   input::placeholder{
+    font-size: 12px;
+   }
+   .dropdown{
+    font-size: 10px;
+   
+   }
+   .dropdown span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+   }
+   
+}
