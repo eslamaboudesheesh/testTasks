@@ -8,16 +8,36 @@ import { Programs } from '../programs';
   styleUrls: ['./programs.component.scss']
 })
 export class ProgramsComponent {
-   programsList: Programs[] =[] ;
-  constructor(private _program:ProgramsService){}
-  ngOnInit():void{
+  public programsList: Programs[] = [];
+  public isLoading: boolean = false
+  public showSystemError: boolean = false;
+
+  constructor(private _program: ProgramsService) { }
+  ngOnInit(): void {
+    this.getPrograms()
+  }
+
+  getPrograms() {
+    //  use this to show loading spinner 
+    this.isLoading = true;
+
     this._program.getPrograms().subscribe({
-      next:(response)=>{console.log(response)
+      next: (response) => {
+
         this.programsList = response;
+        this.isLoading = false;
+
       },
-      error:(err)=>{console.log(err)},
-      complete:()=>{console.log('completed')}
-   })
+      error: (err) => {
+        // show alert message with error
+        this.isLoading = false;
+        this.showSystemError = true;
+
+
+      }
+    })
+
   }
 
 }
+
